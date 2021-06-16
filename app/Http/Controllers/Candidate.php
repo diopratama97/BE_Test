@@ -17,4 +17,19 @@ class Candidate extends Controller
         ];
         return view('data_activity',$data);
     }
+
+    public function dataKandidatbyId($id){
+        $data = [
+            "kandidatbyId"=> $this->Candidate->listKandidatbyId($id)
+        ];
+        return view('data_activity_detail',$data);
+    }
+
+    public function insert(){
+        $data = [
+            'name'=> Request()->name
+        ];
+        $this->Candidate->insertCandidate($data);
+        return route('kandidat')->with('pesan','berhasil registrasi');
+    }
 }

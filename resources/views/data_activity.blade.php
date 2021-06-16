@@ -33,9 +33,10 @@
                                       </tr>
                                   </thead>
                                   <tbody>
+                                  <?php $no=1;?>
                                   @foreach($kandidat as $data)
                                       <tr>
-                                        <td></td>
+                                        <td>{{$no++}}</td>
                                         <td>{{$data->name}} </td>
                                         <td>{{$data->major}}</td>
                                         <td>{{date("M d, Y",strtotime($data->tgl_daftar))}}</td>
@@ -45,7 +46,7 @@
                                         </td>
                                         <td>{{$data->email}}</td>
                                         <td>
-                                            <a href="{{ url('data_activity_detail') }}" type="button" class="btn btn-sm btn-primary mb-1"> Detail</a>
+                                            <a href="/data_activity_detail/{{$data->id}}" type="button" class="btn btn-sm btn-primary mb-1"> Detail</a>
                                             <a href="{{ url('data_activity_edit') }}" type="button" class="btn btn-sm btn-light mb-1"> Ubah</a>
                                         </td>
                                       </tr>

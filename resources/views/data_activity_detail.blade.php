@@ -26,56 +26,56 @@
                                   <div class="col-md-6">
                                       <div class="form-group">
                                           <label for="#">Nama Lengkap</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Ahmad Syaifullah" disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="Ahmad Syaifullah" value="{{$kandidatbyId->name}}" disabled>
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Jenis Kelamin</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Laki-laki" disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="Laki-laki" value="{{$kandidatbyId->gender}}" disabled>
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Tempat Lahir</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Tempat Lahir" disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="Tempat Lahir" value="{{$kandidatbyId->city_of_birth}}" disabled>
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Tanggal Lahir</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Tanggal Lahir" v>
+                                          <input type="text" class="form-control" id="#" placeholder="Tanggal Lahir" value="{{$kandidatbyId->date_of_birth}}" v>
                                       </div>
       
                                       <div class="form-group">
                                           <label for="#">Agama</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Agama" disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="Agama" value="{{$kandidatbyId->agama}}" disabled>
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Email</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder=" Email" disabled>
+                                          <input type="text" class="form-control" id="#" placeholder=" Email" value="{{$kandidatbyId->email}}" disabled>
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Nomor HP</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Nomor HP " disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="Nomor HP " value="{{$kandidatbyId->phone}}" disabled>
                                       </div>
       
                                   </div>
                                   <div class="col-md-6">
                                       <div class="form-group">
                                           <label for="#">Nomor KTP </label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Nomor KTP " disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="Nomor KTP " value="{{$kandidatbyId->identity_number}}" disabled>
                                       </div>
                                       <div class="form-group">
                                           <label for="#"> File KTP</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="File KTP " disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="File KTP " value="{{$kandidatbyId->identity_file}}" disabled>
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Nama Bank </label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Nama Bank " disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="Nama Bank " value="{{$kandidatbyId->bank_name}}" disabled>
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Nomor Bank Akun </label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Nomor Bank Akun " disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="Nomor Bank Akun " value="{{$kandidatbyId->bank_account}}" disabled>
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Alamat Domisili </label><span class="text-danger">*</span>
                                           <textarea class="form-control" id="#" rows="6"
-                                              placeholder="Alamat Domisili" disabled></textarea>
+                                              placeholder="Alamat Domisili" value="{{$kandidatbyId->address}}"disabled></textarea>
                                       </div>
                                   </div>
                               </div><br>
@@ -84,17 +84,17 @@
                                   <div class="col-md-6">
                                       <div class="form-group">
                                           <label for="#">Pendidikan</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Pendidikan">
+                                          <input type="text" class="form-control" id="#" placeholder="Pendidikan" value="{{$kandidatbyId->education_name}}">
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Universitas</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Universitas">
+                                          <input type="text" class="form-control" id="#" placeholder="Universitas" value="{{$kandidatbyId->university_name}}">
                                       </div>
                                       <div class="form-group">
                                           <label for="#"> Tahun Lulus</label><span class="text-danger">*</span>
                                           <div class="form-group">
                                               <div class="input-group" name="#">
-                                                  <input type="text" class="form-control mr-2" id="#" placeholder="Tahun Lulus">
+                                                  <input type="text" class="form-control mr-2" id="#" placeholder="Tahun Lulus" value="{{$kandidatbyId->graduation_year}}">
                                                       <div class="form-check ">
                                                           <label class="form-check-label">
                                                               <input type="checkbox" class="form-check-input"> Masih Kuliah
@@ -109,11 +109,11 @@
                                   <div class="col-md-6">
                                       <div class="form-group">
                                           <label for="#">Jurusan </label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Jurusan">
+                                          <input type="text" class="form-control" id="#" placeholder="Jurusan" value="{{$kandidatbyId->major}}">
                                       </div>
                                       <div class="form-group">
                                           <label for="#"> Semester</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Semester">
+                                          <input type="text" class="form-control" id="#" placeholder="Semester" value="{{$kandidatbyId->semester}}">
                                       </div>
                                   </div><br>
                                   </div>
@@ -149,7 +149,7 @@
                                   <div class="col-md-12">
                                       <div class="form-group">
                                           <label for="#">Keahlian</label><span class="text-danger">*</span>
-                                          <textarea class="form-control" id="exampleTextarea1" rows="10"></textarea>
+                                          <textarea class="form-control" id="exampleTextarea1" rows="10" value="{{$kandidatbyId->skill}}"></textarea>
                                       </div>
                                   </div>
                                   </div><br>
@@ -158,17 +158,17 @@
                                   <div class="col-md-6">
                                       <div class="form-group">
                                           <label for="#">File CV</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="File CV.pdf">
+                                          <input type="text" class="form-control" id="#" placeholder="File CV.pdf" value="{{$kandidatbyId->file_cv}}">
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Past Photo</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="Photo.jpg">
+                                          <input type="text" class="form-control" id="#" placeholder="Photo.jpg" value="{{$kandidatbyId->file_photo}}">
                                       </div>
                                   </div>
                                   <div class="col-md-6">
                                       <div class="form-group">
                                           <label for="#"> Portofolio</label>
-                                          <input type="text" class="form-control" id="#" placeholder="Portofolio.pdf">
+                                          <input type="text" class="form-control" id="#" placeholder="Portofolio.pdf" value="{{$kandidatbyId->file_portfolio}}">
                                       </div>
                                   </div>
                                   </div><br>
@@ -227,7 +227,7 @@
                                               <i class="input-helper"></i></label>
                                           </div>
                                       
-                                          <input type="text" class="form-control" id="#" placeholder="">
+                                          <input type="text" class="form-control" id="#" placeholder=""value="{{$kandidatbyId->source_information_other}}">
                                       </div>
                                   </div>
                                   </div><br>
@@ -263,11 +263,11 @@
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Hasil Assesmen </label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="" disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="" disabled value="{{$kandidatbyId->assessment_score}}">
                                       </div>
                                       <div class="form-group">
                                           <label for="#"> Rangkin</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="" disabled>
+                                          <input type="text" class="form-control" id="#" placeholder="" disabled value="{{$kandidatbyId->ranking}}">
                                       </div>
                                       <div class="form-group">
                                           <label for="#"> Hasil</label><span class="text-danger">*</span>
