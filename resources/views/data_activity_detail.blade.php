@@ -122,25 +122,25 @@
                                   <div class="col-md-6">
                                       <div class="form-group">
                                           <label for="#">Organisasi</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="organisasi">
+                                          <input type="text" class="form-control" id="#" placeholder="organisasi" value="{{$kandidatbyId->org_name}}">
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Tahun</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="tahun">
+                                          <input type="text" class="form-control" id="#" placeholder="tahun" value="{{$kandidatbyId->year}}">
                                       </div>
                                       <div class="form-group">
                                           <label for="#">Jabatan</label><span class="text-danger">*</span>
-                                          <input type="text" class="form-control" id="#" placeholder="jabatan">
+                                          <input type="text" class="form-control" id="#" placeholder="jabatan" value="{{$kandidatbyId->position}}">
                                       </div>
                                   </div>
                                   <div class="col-md-6">
                                       <div class="form-group">
                                           <label for="#">Deskripsi Kegiatan </label><span class="text-danger">*</span>
-                                          <textarea class="form-control" id="exampleTextarea1" rows="6"></textarea>
+                                          <textarea class="form-control" id="exampleTextarea1" rows="6" value="{{$kandidatbyId->description}}"></textarea>
                                       </div>
                                       <div class="form-group">
                                           <label for="#"> File</label>
-                                          <input type="file" class="form-control" id="#" placeholder="">
+                                          <input type="file" class="form-control" id="#" placeholder="" value="{{$kandidatbyId->file}}">
                                       </div>
                                   </div>
                                   </div><br>

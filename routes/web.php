@@ -35,8 +35,10 @@ Route::get('/agama',[Dropdown::class,'agama'])->name('agama');
 // Route::get('/data_activity_detail', function () {
 //     return view('data_activity_detail');
 // });
-Route::GET('/data_activity_detail/{id}',[Candidate::class,'dataKandidatbyId']);
+Route::get('/data_activity_detail/{id}',[Candidate::class,'dataKandidatbyId']);
 
-Route::get('/data_activity_edit', function () {
-    return view('data_activity_edit');
-});
+// Route::get('/data_activity_edit', function () {
+//     return view('data_activity_edit');
+// });
+Route::get('/data_activity_edit/{id}',[Candidate::class,'edit']);
+Route::post('/data_activity_edit/update',[Candidate::class,'update']);

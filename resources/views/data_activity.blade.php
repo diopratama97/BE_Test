@@ -47,7 +47,7 @@
                                         <td>{{$data->email}}</td>
                                         <td>
                                             <a href="/data_activity_detail/{{$data->id}}" type="button" class="btn btn-sm btn-primary mb-1"> Detail</a>
-                                            <a href="{{ url('data_activity_edit') }}" type="button" class="btn btn-sm btn-light mb-1"> Ubah</a>
+                                            <a href="/data_activity_edit/{{$data->id}}" type="button" class="btn btn-sm btn-light mb-1"> Ubah</a>
                                         </td>
                                       </tr>
                                   @endforeach

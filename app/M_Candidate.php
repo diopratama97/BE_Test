@@ -34,4 +34,28 @@ class M_Candidate extends Model
     public function insertCandidate($data){
         DB::table('candidate')->insert($data);
     }
+
+    public function insertOrganization($data){
+        DB::table('candidate_organization')->insert($data);
+    }
+
+    public function updateCandidate($id,$data){
+        DB::table('candidate')->where('id',$id)->update($data);
+    }
+
+    public function updateOrganization($id,$data){
+        DB::table('candidate_organization')->where('candidate_id',$id)->update($data);
+    }
+
+    public function countAllkandidat(){
+        //get data kandidat semua
+        $countAll = DB::table('candidate')->count();
+        return $countAll;
+    }
+
+    public function countOrganization(){
+        //get data kandidat semua
+        $countAll = DB::table('candidate_organization')->count();
+        return $countAll;
+    }
 }
