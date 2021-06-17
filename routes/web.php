@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Candidate;
-
+use App\Http\Controllers\Dropdown;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,14 +24,18 @@ Route::get('/form_registrasi', function () {
     return view('form_registrasi');
 });
 
+Route::post('/form_registrasi/insert',[Candidate::class,'insert']);
+
 // Route::get('/data_activity', function () {
 //     return view('data_activity');
 // });
-Route::get('/data_activity',[Candidate::class,'dataKandidat']);
+Route::get('/data_activity',[Candidate::class,'dataKandidat'])->name('kandidat');
+Route::get('/agama',[Dropdown::class,'agama'])->name('agama');
 
-Route::get('/data_activity_detail', function () {
-    return view('data_activity_detail');
-});
+// Route::get('/data_activity_detail', function () {
+//     return view('data_activity_detail');
+// });
+Route::GET('/data_activity_detail/{id}',[Candidate::class,'dataKandidatbyId']);
 
 Route::get('/data_activity_edit', function () {
     return view('data_activity_edit');

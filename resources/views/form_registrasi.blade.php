@@ -21,15 +21,16 @@
                   <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            
+                            <form action="/form_registrasi/insert" method="post" enctype="multipart/form-data">
+                            {{csrf_field()}}
                             <div class="form-group">
                                 <label for="#">Nama Lengkap</label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#"
+                                <input type="text" class="form-control" id="#" name="nama_lengkap"
                                     placeholder="Ahmad Syaifullah">
                             </div>
                             <div class="form-group">
                                 <label for="#">Jenis Kelamin</label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder="Laki-laki">
+                                <input type="text" class="form-control" id="#" name="jenis_kelamin" placeholder="Laki-laki">
                             </div>
                             <div class="form-group">
                                 <label for="#">Tanggal Lahir</label><span class="text-danger">*</span>
@@ -37,56 +38,56 @@
                             </div>
                             <div class="form-group">
                                 <label for="#">Agama</label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder="Agama">
+                                <input type="text" class="form-control" id="#" name="agama" placeholder="Agama">
                             </div>
                             <div class="form-group">
                                 <label for="#">Email</label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder=" Email">
+                                <input type="text" class="form-control" id="#" placeholder=" Email" name="email">
                             </div>
                             <div class="form-group">
                                 <label for="#">Nomor HP</label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder="Nomor HP ">
+                                <input type="text" class="form-control" id="#" placeholder="Nomor HP " name="no_hp">
                             </div>
                             <div class="form-group">
                                 <label for="#">Twitter</label><span class="text-danger"></span>
-                                <input type="text" class="form-control" id="#" placeholder="Twitter">
+                                <input type="text" class="form-control" id="#" placeholder="Twitter" name="twitter">
                             </div>
                             <div class="form-group">
                                 <label for="#">Facebook</label><span class="text-danger"></span>
-                                <input type="text" class="form-control" id="#" placeholder="Facebook ">
+                                <input type="text" class="form-control" id="#" placeholder="Facebook " name="fb">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="#">Nomor KTP </label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder="Nomor KTP ">
+                                <input type="text" class="form-control" id="#" placeholder="Nomor KTP " name="no_ktp">
                             </div>
                             <div class="form-group">
                                 <label for="#"> File KTP</label><span class="text-danger">*</span>
-                                <input type="file" class="form-control" id="#" placeholder=" KTP ">
+                                <input type="file" class="form-control" id="file_ktp" placeholder=" KTP " name="file_ktp">
 
                             </div>
                             <div class="form-group">
                                 <label for="#">Nama Bank </label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder="Nama Bank ">
+                                <input type="text" class="form-control" id="#" placeholder="Nama Bank " name="nama_bank">
                             </div>
                             <div class="form-group">
                                 <label for="#">Nomor Bank Akun </label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#"
+                                <input type="text" class="form-control" id="#" name="no_bank"
                                     placeholder="Nomor Bank Akun ">
                             </div>
                             <div class="form-group">
                                 <label for="#">Alamat Domisili </label><span class="text-danger">*</span>
-                                <textarea class="form-control" id="#" rows="8"
+                                <textarea class="form-control" id="#" rows="8" name="alamat"
                                     placeholder="Alamat Domisili"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="#">Instagram</label><span class="text-danger"></span>
-                                <input type="text" class="form-control" id="#" placeholder="Instagram">
+                                <input type="text" class="form-control" id="#" placeholder="Instagram" name="ig">
                             </div>
                             <div class="form-group">
                                 <label for="#">Linked In</label><span class="text-danger"></span>
-                                <input type="text" class="form-control" id="#" placeholder="Linked In ">
+                                <input type="text" class="form-control" id="#" placeholder="Linked In " name="linked">
                             </div>
                         </div>
                     </div><br>
@@ -95,17 +96,17 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="#">Pendidikan</label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder="Pendidikan">
+                                <input type="text" class="form-control" id="#" placeholder="Pendidikan" name="pendidikan">
                             </div>
                             <div class="form-group">
                                 <label for="#">Universitas</label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder="Universitas">
+                                <input type="text" class="form-control" id="#" placeholder="Universitas" name="universitas">
                             </div>
                             <div class="form-group">
                                 <label for="#"> Tahun Lulus</label><span class="text-danger">*</span>
                                 <div class="form-group">
-                                    <div class="input-group" name="#">
-                                        <input type="text" class="form-control mr-2" id="#"
+                                    <div class="input-group" name="tahun_lulus">
+                                        <input type="text" class="form-control mr-2" id="#" 
                                             placeholder="Tahun Lulus">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input"
@@ -120,11 +121,11 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="#">Jurusan </label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder="Jurusan">
+                                <input type="text" class="form-control" id="#" placeholder="Jurusan" name="jurusan">
                             </div>
                             <div class="form-group">
                                 <label for="#"> Semester</label><span class="text-danger">*</span>
-                                <input type="text" class="form-control" id="#" placeholder="Semester">
+                                <input type="text" class="form-control" id="#" placeholder="Semester" name="semester">
                             </div>
                         </div><br>
                     </div>
@@ -136,25 +137,25 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="#">Organisasi</label><span class="text-danger">*</span>
-                                                    <input type="text" class="form-control" id="#" placeholder="organisasi">
+                                                    <input type="text" class="form-control" id="#" placeholder="organisasi" name="organisasi">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="#">Tahun</label><span class="text-danger">*</span>
-                                                    <input type="text" class="form-control" id="#" placeholder="tahun">
+                                                    <input type="text" class="form-control" id="#" placeholder="tahun" name="tahun">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="#">Jabatan</label><span class="text-danger">*</span>
-                                                    <input type="text" class="form-control" id="#" placeholder="jabatan">
+                                                    <input type="text" class="form-control" id="#" placeholder="jabatan" name="jabatan">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="#">Deskripsi Kegiatan </label><span class="text-danger">*</span>
-                                                    <textarea class="form-control" id="exampleTextarea1" rows="6"></textarea>
+                                                    <textarea class="form-control" id="exampleTextarea1" name="desc_kegiatan" rows="6"></textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="#"> File</label>
-                                                    <input type="file" class="form-control" id="#" placeholder="">
+                                                    <input type="file" class="form-control" id="#" placeholder="" name="file_organisasi">
                                                 </div>
                                             </div>
                                         </div>
@@ -170,7 +171,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="#">Keahlian</label><span class="text-danger">*</span>
-                                <textarea class="form-control" id="exampleTextarea1" rows="10"></textarea>
+                                <textarea class="form-control" id="exampleTextarea1" rows="10" name="keahlian"></textarea>
                             </div>
                         </div>
                     </div><br>
@@ -179,17 +180,17 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="#">File CV</label><span class="text-danger">*</span>
-                                <input type="file" class="form-control" id="#" placeholder="File CV.pdf">
+                                <input type="file" class="form-control" id="#" placeholder="File CV.pdf" name="file_cv">
                             </div>
                             <div class="form-group">
                                 <label for="#">Past Photo</label><span class="text-danger">*</span>
-                                <input type="file" class="form-control" id="#" placeholder="Photo.jpg">
+                                <input type="file" class="form-control" id="#" placeholder="Photo.jpg" name="file_photo">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="#"> Portofolio</label>
-                                <input type="file" class="form-control" id="#" placeholder="Portofolio.pdf">
+                                <input type="file" class="form-control" id="#" placeholder="Portofolio.pdf" name="file_portfolio">
                             </div>
                         </div>
                     </div><br>
@@ -200,7 +201,7 @@
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <div class="form-group mb-0">
                                         <input type="radio" id="customRadio1" name="customRadio"
-                                            class="custom-control-input">
+                                            class="custom-control-input" value="Internet">
                                         <label class="custom-control-label" for="customRadio1">Internet</label>
                                     </div>
                                 </div>
@@ -209,7 +210,7 @@
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <div class="form-group mb-0">
                                         <input type="radio" id="customRadio2" name="customRadio"
-                                            class="custom-control-input">
+                                            class="custom-control-input" value="Kampus">
                                         <label class="custom-control-label"
                                             for="customRadio2">Kampus</label>
                                     </div>
@@ -221,7 +222,7 @@
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <div class="form-group mb-0">
                                         <input type="radio" id="customRadio3" name="customRadio"
-                                            class="custom-control-input">
+                                            class="custom-control-input" value="Instagram">
                                         <label class="custom-control-label"
                                             for="customRadio3">Instagram</label>
                                     </div>
@@ -231,7 +232,7 @@
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <div class="form-group mb-0">
                                         <input type="radio" id="customRadio4" name="customRadio"
-                                            class="custom-control-input">
+                                            class="custom-control-input" value="facebook">
                                         <label class="custom-control-label"
                                             for="customRadio4">facebook</label>
                                     </div>
@@ -243,7 +244,7 @@
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <div class="form-group mb-0">
                                         <input type="radio" id="customRadio5" name="customRadio"
-                                            class="custom-control-input">
+                                            class="custom-control-input" value="twitter">
                                         <label class="custom-control-label"
                                             for="customRadio5">Twitter</label>
                                     </div>
@@ -258,7 +259,7 @@
                                             for="customRadio6">Lain-lain</label>
                                     </div>
                                 </div>
-                                <input type="text" class="form-control" id="#" placeholder="">
+                                <input type="text" class="form-control" id="#" placeholder="" name="lain_lain">
                             </div>
                         </div>
                     </div><br>
@@ -272,9 +273,10 @@
                         </div>
                     </div>
                 <div class="mt-4">
-                    <a href="{{ url('data_activity') }}" class="btn btn-outline-primary">Kirim Lamaran <i class="mdi mdi-send"></i></a>
+                    <button class="btn btn-outline-primary">Kirim Lamaran <i class="mdi mdi-send"></i></button>
                 </div>
             <!--end form-->
+            </form>
         </div>
                 
                   
